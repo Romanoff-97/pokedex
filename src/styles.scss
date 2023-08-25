@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import './config-scss/variables.scss';
+@import './config-scss/reset.scss';
+@import './config-scss/rem-convert.scss';
+
+html {
+  background-color: var(--cor-primaria);
+  font-family: Roboto;
+}
+
+main {
+  width: rem-convert(600);
+  margin: 0 auto;
+  box-sizing: border-box;
+}

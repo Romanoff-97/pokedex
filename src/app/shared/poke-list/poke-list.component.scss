@@ -1,0 +1,88 @@
+@import '../../../config-scss/rem-convert.scss';
+
+:host {
+  body {
+    margin-top: rem-convert(20);
+
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    gap: rem-convert(20);
+
+    max-width: rem-convert(600);
+  }
+
+  .pokemon {
+    position: relative;
+    margin-left: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 41.5%;
+    height: rem-convert(120);
+    padding: rem-convert(20);
+
+    background-color: var(--branco);
+    border-radius: rem-convert(10);
+
+    &_info {
+      h2 {
+        margin-bottom: rem-convert(10);
+
+        font-size: rem-convert(22);
+        font-style: italic;
+        font-weight: bold;
+
+        color: var(--cor-primaria);
+      }
+
+      h3 {
+        font-size: rem-convert(14);
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: rem-convert(5);
+
+          margin-bottom: rem-convert(5);
+          height: rem-convert(16);
+          width: rem-convert(60);
+
+          background: var(--cinza);
+          border-radius: rem-convert(32);
+          text-align: center;
+
+          font-size: rem-convert(10);
+        }
+      }
+    }
+
+    &_image {
+      position: absolute;
+      right: rem-convert(20);
+      bottom: rem-convert(20);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: rem-convert(110);
+      height: rem-convert(90);
+
+      background: url('../../../assets/bg/bolinhas-bg-pokemon.svg') no-repeat;
+
+      img {
+        max-width: rem-convert(80);
+        max-height: rem-convert(80);
+      }
+    }
+  }
+
+}

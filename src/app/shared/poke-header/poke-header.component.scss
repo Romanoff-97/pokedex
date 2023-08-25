@@ -1,0 +1,11 @@
+@import '../../../config-scss/rem-convert.scss';
+
+:host {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: rem-convert(40) 0;
+  }
+}
