@@ -1,30 +1,34 @@
 @import '../../../config-scss/rem-convert.scss';
+@import '../../../config-scss/variables.scss';
+
 
 :host {
-  body {
-    margin-top: rem-convert(20);
-
-    box-sizing: border-box;
+  .list-pokemon-body {
+    margin-top: rem-convert(5);
     display: flex;
-    flex-flow: row wrap;
-    gap: rem-convert(20);
-
+    gap: rem-convert(10);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     max-width: rem-convert(600);
   }
 
   .pokemon {
+    text-decoration: none;
+    color: var(--cor-primaria);
     position: relative;
-    margin-left: none;
-
     display: flex;
-    justify-content: space-between;
 
-    width: 41.5%;
     height: rem-convert(120);
+    width: 42%;
     padding: rem-convert(20);
 
     background-color: var(--branco);
     border-radius: rem-convert(10);
+
+    #pokemon-name-card {
+      font-size: 28px;
+    }
 
     &_info {
       h2 {
@@ -33,12 +37,14 @@
         font-size: rem-convert(22);
         font-style: italic;
         font-weight: bold;
+        text-transform: capitalize;
 
         color: var(--cor-primaria);
       }
 
       h3 {
         font-size: rem-convert(14);
+        font-weight: 400;
       }
 
       ul {
@@ -59,13 +65,17 @@
           border-radius: rem-convert(32);
           text-align: center;
 
-          font-size: rem-convert(10);
+          font-size: rem-convert(13);
+          text-transform: capitalize;
+          font-weight: 500;
         }
       }
     }
 
     &_image {
       position: absolute;
+      margin-top: rem-convert(30);
+      margin-left: rem-convert(10);
       right: rem-convert(20);
       bottom: rem-convert(20);
 
@@ -79,8 +89,8 @@
       background: url('../../../assets/bg/bolinhas-bg-pokemon.svg') no-repeat;
 
       img {
-        max-width: rem-convert(80);
-        max-height: rem-convert(80);
+        max-width: rem-convert(160);
+        max-height: rem-convert(160);
       }
     }
   }
