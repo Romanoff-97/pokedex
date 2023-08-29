@@ -1,20 +1,23 @@
+<!--Barra de Pesquisa-->
+<poke-search (emittSeach)="getPokemonSearched($event)"></poke-search>
+<!--Lista de Pokemons - Body-->
+
 <body class="list-pokemon-body">
   <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
     <a [routerLink]="['details', pokemon.status.id]" class="pokemon" *ngIf="pokemon.status">
+      <section class="pokemon_image">
+        <img [src]="pokemon.status.sprites.front_default" [alt]="pokemon.name">
+      </section>
       <section class="pokemon_info">
-        <h2 id="pokemon-name-card">{{ pokemon.name }} </h2>
+        <h2 class="pokemon-name-card">{{ pokemon.name }} </h2>
         <br>
-        <h3 style="font-size:18px;">Details:</h3>
+        <h3>Details:</h3>
         <ul>
           <li *ngFor="let item of pokemon.status.types">
             {{item.type.name}}
           </li>
         </ul>
       </section>
-      <section class="pokemon_image">
-        <img [src]="pokemon.status.sprites.front_default" [alt]="pokemon.name">
-      </section>
     </a>
   </ng-template>
-
 </body>
